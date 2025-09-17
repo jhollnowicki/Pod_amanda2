@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Amanda Matos Podologia Design System - Premium Healthcare Design */
+
+@layer base {
+  :root {
+    /* Core Brand Colors - Following logo identity */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 15%;
+
+    /* Amanda Matos Brand Colors */
+    --brand-pink: 345 35% 75%;
+    --brand-pink-light: 345 45% 85%;
+    --brand-pink-dark: 345 25% 65%;
+    --brand-gray: 0 0% 85%;
+    --brand-gray-light: 0 0% 95%;
+    --brand-gray-dark: 0 0% 65%;
+
+    /* Card and Surface Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 15%;
+    --card-hover: 345 45% 98%;
+
+    /* Primary Colors (Pink theme) */
+    --primary: 345 35% 75%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 345 45% 80%;
+    --primary-light: 345 65% 95%;
+
+    /* Secondary Colors (Gray theme) */
+    --secondary: 0 0% 95%;
+    --secondary-foreground: 0 0% 25%;
+    --secondary-hover: 0 0% 90%;
+
+    /* Accent Colors */
+    --accent: 345 25% 90%;
+    --accent-foreground: 0 0% 25%;
+
+    /* Muted Colors */
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    /* Interactive States */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders and Inputs */
+    --border: 0 0% 90%;
+    --input: 0 0% 96%;
+    --ring: 345 35% 75%;
+
+    /* Design System */
+    --radius: 0.75rem;
+    --radius-sm: 0.5rem;
+    --radius-lg: 1rem;
+
+    /* Gradients */
+    --gradient-pink: linear-gradient(135deg, hsl(var(--brand-pink-light)), hsl(var(--brand-pink)));
+    --gradient-soft: linear-gradient(135deg, hsl(var(--background)), hsl(var(--brand-gray-light)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--brand-pink-light) / 0.1), hsl(var(--brand-gray-light) / 0.3));
+
+    /* Shadows */
+    --shadow-soft: 0 2px 20px hsl(var(--brand-pink) / 0.08);
+    --shadow-card: 0 4px 30px hsl(var(--brand-pink) / 0.12);
+    --shadow-hover: 0 8px 40px hsl(var(--brand-pink) / 0.16);
+    --shadow-float: 0 20px 60px hsl(var(--brand-pink) / 0.2);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--brand-pink));
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--brand-pink-dark));
+  }
+}
+
+@layer components {
+  /* WhatsApp floating button */
+  .whatsapp-float {
+    @apply fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center text-2xl;
+    box-shadow: var(--shadow-float);
+  }
+
+  /* Premium button variants */
+  .btn-hero {
+    @apply bg-gradient-to-r from-brand-pink to-brand-pink-dark text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105;
+  }
+
+  .btn-outline-hero {
+    @apply border-2 border-brand-pink text-brand-pink bg-transparent hover:bg-brand-pink hover:text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300;
+  }
+
+  /* Card animations */
+  .card-hover {
+    @apply transition-all duration-300 hover:transform hover:scale-105;
+    box-shadow: var(--shadow-card);
+  }
+
+  .card-hover:hover {
+    box-shadow: var(--shadow-hover);
+  }
+
+  /* Gradient backgrounds */
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .bg-gradient-soft {
+    background: var(--gradient-soft);
+  }
+
+  /* Text gradients */
+  .text-gradient-pink {
+    @apply bg-gradient-to-r from-brand-pink to-brand-pink-dark bg-clip-text text-transparent;
+  }
+
+  /* Section spacing */
+  .section-padding {
+    @apply py-16 lg:py-24;
+  }
+
+  /* Container responsive */
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+  }
+}
