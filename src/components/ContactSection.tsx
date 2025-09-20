@@ -29,7 +29,7 @@ const ContactSection = () => {
   };
 
   const handleInstagram = () => {
-    window.open('https://instagram.com/amandamatospodologia', '_blank');
+    window.open('https://www.instagram.com/espaco.saudeebem_estar/', '_blank');
   };
 
   const handleMaps = () => {
@@ -154,7 +154,7 @@ const ContactSection = () => {
                 </div>
               </CardHeader>
               <CardContent>
-                <p className="text-pink-700 font-semibold mb-4">@amandamatospodologia</p>
+                <p className="text-pink-700 font-semibold mb-4">@espaco.saudeebem_estar</p>
                 <Button 
                   variant="outline"
                   className="w-full border-pink-500 text-pink-500 hover:bg-pink-500 hover:text-white"
