@@ -233,13 +233,22 @@ const ServicesSection = () => {
               Agende uma avaliação completa hoje mesmo.
             </p>
             <Button
-              size="lg"
-              onClick={() => handleWhatsApp("Consulta personalizada")}
-              className="bg-primary hover:bg-primary-hover text-white px-8 py-4 font-semibold shadow-card hover:shadow-hover transition-all duration-300 transform hover:scale-105"
-            >
-              Agendar Avaliação Personalizada
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
+  size="lg"
+  onClick={() => handleWhatsApp("Consulta personalizada")}
+  className="
+    w-full sm:w-auto
+    bg-primary hover:bg-primary-hover text-white
+    px-4 py-4 font-semibold shadow-card hover:shadow-hover
+    md:hover:scale-105
+    !whitespace-normal break-words text-center leading-snug
+    rounded-xl inline-flex items-center justify-center gap-2 mx-auto
+  "
+>
+  <span className="min-w-0">Agendar Avaliação Personalizada</span>
+  <ArrowRight className="w-5 h-5 flex-shrink-0" />
+</Button>
+
+
           </div>
         </div>
       </div>
@@ -250,7 +259,7 @@ const BeforeAfterSlider = ({ images }: { images: string[] }) => {
   const [i, setI] = useState(0);
   const labels = ["Antes", "Depois"];
 
-    useEffect(() => {
+  useEffect(() => {
     const t = setInterval(() => setI(p => (p + 1) % images.length), 4000);
     return () => clearInterval(t);
   }, [images.length]);

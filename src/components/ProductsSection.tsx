@@ -203,7 +203,7 @@ const ProductsSection = () => {
               <Shield className="w-4 h-4 text-green-500 mr-2" />
               <span>Produtos Originais</span>
             </div>
-            
+
             <div className="flex items-center">
               <Heart className="w-4 h-4 text-red-500 mr-2" />
               <span>Satisfação Garantida</span>
@@ -260,23 +260,23 @@ const ProductsSection = () => {
             ))}
           </div>
 
-          <div className="mt-12 text-center">
+          <div className="mt-12 flex justify-center">
             <Button
-  size="lg"
-  onClick={() => handleWhatsApp("Consulta para produtos manipulados")}
-  className="
-    w-full sm:w-auto
-    bg-primary hover:bg-primary-hover text-white
-    px-4 py-4 font-semibold shadow-card hover:shadow-hover
-    md:hover:scale-105
-    !whitespace-normal leading-snug text-center
-    rounded-xl flex items-center justify-center gap-2
-  "
->
-  <MessageCircle className="w-5 h-5 flex-shrink-0" />
-  <span className="min-w-0">Agendar Consulta para Manipulados</span>
-  <ArrowRight className="w-5 h-5 flex-shrink-0" />
-</Button>
+              size="lg"
+              onClick={() => handleWhatsApp("Consulta para produtos manipulados")}
+              className="
+                  w-full sm:w-auto
+                  bg-primary hover:bg-primary-hover text-white
+                  px-4 py-4 font-semibold shadow-card hover:shadow-hover
+                  md:hover:scale-105
+                  !whitespace-normal leading-snug text-center
+                  rounded-xl flex items-center justify-center gap-2
+                "
+            >
+              <MessageCircle className="w-5 h-5 flex-shrink-0" />
+              <span className="min-w-0">Agendar Consulta para Manipulados</span>
+              <ArrowRight className="w-5 h-5 flex-shrink-0" />
+            </Button>
 
           </div>
         </div>
