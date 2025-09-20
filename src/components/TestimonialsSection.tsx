@@ -12,7 +12,7 @@ const TestimonialsSection = () => {
     const message = encodeURIComponent(
       'Olá! Vi os depoimentos no site e gostaria de agendar minha consulta também!'
     );
-    window.open(`https://wa.me/5541999999999?text=${message}`, '_blank');
+    window.open(`https://wa.me/5541997312878?text=${message}`, '_blank');
   };
 
   const testimonials = [
@@ -141,7 +141,7 @@ const TestimonialsSection = () => {
 
           <Card className="bg-white border-0 shadow-card text-center p-6">
             <CardContent className="p-0 space-y-4">
-              <div className="text-4xl font-bold text-primary">1000+</div>
+              <div className="text-4xl font-bold text-primary">5000+</div>
               <div className="text-lg font-semibold text-foreground">Pacientes Atendidos</div>
               <p className="text-sm text-muted-foreground">
                 Mais de mil vidas transformadas através do cuidado especializado
@@ -170,7 +170,7 @@ const TestimonialsSection = () => {
                   Seja o Próximo a Transformar Sua Vida!
                 </h3>
                 <p className="text-muted-foreground">
-                  Junte-se aos mais de 1000 pacientes que já experimentaram 
+                  Junte-se aos mais de 5000 pacientes que já experimentaram 
                   a diferença do nosso atendimento especializado. 
                   Agende sua consulta hoje mesmo!
                 </p>

@@ -1,22 +1,24 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { 
-  Scissors, 
-  Zap, 
-  Heart, 
-  Shield, 
-  Baby, 
+import {
+  Scissors,
+  Zap,
+  Heart,
+  Shield,
+  Baby,
   Activity,
   ArrowRight,
   Check
 } from 'lucide-react';
+import { useState, useEffect } from "react";
+
 
 const ServicesSection = () => {
   const handleWhatsApp = (service: string) => {
     const message = encodeURIComponent(
       `Olá! Gostaria de saber mais sobre o serviço: ${service}`
     );
-    window.open(`https://wa.me/5541999999999?text=${message}`, '_blank');
+    window.open(`https://wa.me/5541997312878?text=${message}`, '_blank');
   };
 
   const serviceCategories = [
@@ -40,6 +42,11 @@ const ServicesSection = () => {
           name: "Cuidados com Cutículas",
           description: "Manutenção profissional para unhas saudáveis",
           features: ["Técnica profissional", "Produtos esterilizados", "Cuidado especializado"]
+        },
+        {
+          name: "Antes e Depois",
+          description: "Resultados reais do tratamento",
+          images: ["/service/correçao-de-unha-encravada.jpg", "/service/correça-unha-durante.jpg"]
         }
       ]
     },
@@ -86,6 +93,11 @@ const ServicesSection = () => {
           name: "Olho de Peixe",
           description: "Remoção segura de helomas",
           features: ["Procedimento indolor", "Técnica precisa", "Resultado definitivo"]
+        },
+        {
+          name: "Antes e Depois",
+          description: "Resultados reais do tratamento",
+          images: ["/service/calos-antes.jpg", "/service/calos-durante.jpg"]
         }
       ]
     },
@@ -109,7 +121,13 @@ const ServicesSection = () => {
           name: "Orientação Preventiva",
           description: "Educação para cuidados diários",
           features: ["Instruções personalizadas", "Material educativo", "Acompanhamento contínuo"]
+        },
+        {
+          name: "Antes e Depois",
+          description: "Resultados reais do tratamento",
+          images: ["/service/pes-diabeticos-antes.jpg", "/service/pes-diabeticos-depois.jpg"]
         }
+
       ]
     }
   ];
@@ -129,7 +147,7 @@ const ServicesSection = () => {
             <span className="text-foreground">para Todos os Tipos de Pés</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Oferecemos uma ampla gama de tratamentos com tecnologia de ponta e cuidado humanizado. 
+            Oferecemos uma ampla gama de tratamentos com tecnologia de ponta e cuidado humanizado.
             Cada procedimento é personalizado para suas necessidades específicas.
           </p>
         </div>
@@ -153,8 +171,8 @@ const ServicesSection = () => {
                 {/* Services Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {category.services.map((service, serviceIndex) => (
-                    <Card 
-                      key={serviceIndex} 
+                    <Card
+                      key={serviceIndex}
                       className="card-hover bg-white border-0 overflow-hidden group cursor-pointer"
                       onClick={() => handleWhatsApp(service.name)}
                     >
@@ -167,27 +185,35 @@ const ServicesSection = () => {
                         </CardDescription>
                       </CardHeader>
                       <CardContent className="space-y-4">
-                        <div className="space-y-2">
-                          {service.features.map((feature, featureIndex) => (
-                            <div key={featureIndex} className="flex items-center space-x-2">
-                              <Check className="w-4 h-4 text-primary flex-shrink-0" />
-                              <span className="text-sm text-muted-foreground">{feature}</span>
+                        {service.images ? (
+                          <BeforeAfterSlider images={service.images} />
+                        ) : (
+                          <>
+                            <div className="space-y-2">
+                              {service.features.map((feature, featureIndex) => (
+                                <div key={featureIndex} className="flex items-center space-x-2">
+                                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                                  <span className="text-sm text-muted-foreground">{feature}</span>
+                                </div>
+                              ))}
                             </div>
-                          ))}
-                        </div>
-                        
-                        <Button 
-                          variant="ghost" 
-                          className="w-full group-hover:bg-primary-light group-hover:text-primary transition-all duration-300"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            handleWhatsApp(service.name);
-                          }}
-                        >
-                          Saiba Mais
-                          <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                        </Button>
+
+                            <Button
+                              variant="ghost"
+                              className="w-full group-hover:bg-primary-light group-hover:text-primary transition-all duration-300"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handleWhatsApp(service.name);
+                              }}
+                            >
+                              Saiba Mais
+                              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                            </Button>
+                          </>
+                        )}
                       </CardContent>
+
+
                     </Card>
                   ))}
                 </div>
@@ -203,10 +229,10 @@ const ServicesSection = () => {
               Não encontrou o que procura?
             </h3>
             <p className="text-muted-foreground mb-6">
-              Oferecemos consultas personalizadas para avaliar suas necessidades específicas. 
+              Oferecemos consultas personalizadas para avaliar suas necessidades específicas.
               Agende uma avaliação completa hoje mesmo.
             </p>
-            <Button 
+            <Button
               size="lg"
               onClick={() => handleWhatsApp("Consulta personalizada")}
               className="bg-primary hover:bg-primary-hover text-white px-8 py-4 font-semibold shadow-card hover:shadow-hover transition-all duration-300 transform hover:scale-105"
@@ -220,5 +246,36 @@ const ServicesSection = () => {
     </section>
   );
 };
+const BeforeAfterSlider = ({ images }: { images: string[] }) => {
+  const [i, setI] = useState(0);
+  const labels = ["Antes", "Depois"];
+
+    useEffect(() => {
+    const t = setInterval(() => setI(p => (p + 1) % images.length), 4000);
+    return () => clearInterval(t);
+  }, [images.length]);
+
+  return (
+    <div className="space-y-2">
+      {/* badge fora da imagem */}
+      <span className="inline-block px-3 py-1 text-sm font-semibold rounded-full bg-[#D6A7AF] text-white">
+        {labels[i]}
+      </span>
+
+      {/* container com recorte arredondado */}
+      <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden ring-1 ring-[#EAD1D6]/60">
+        <img
+          src={images[i]}
+          alt={labels[i]}
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+      </div>
+    </div>
+  );
+};
+
+
+
+
 
 export default ServicesSection;

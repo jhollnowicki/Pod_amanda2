@@ -17,7 +17,7 @@ const AboutSection = () => {
     const message = encodeURIComponent(
       'Olá Amanda! Gostaria de conversar com você sobre meus cuidados podológicos.'
     );
-    window.open(`https://wa.me/5541999999999?text=${message}`, '_blank');
+    window.open(`https://wa.me/5541997312878?text=${message}`, '_blank');
   };
 
   const achievements = [
@@ -28,12 +28,12 @@ const AboutSection = () => {
     },
     {
       icon: Users,
-      title: "1000+ Pacientes",
+      title: "5000+ Pacientes",
       description: "Mais de mil vidas transformadas através do cuidado especializado"
     },
     {
       icon: Clock,
-      title: "5+ Anos de Experiência",
+      title: "15+ Anos de Experiência",
       description: "Experiência sólida no cuidado e tratamento de diversas condições"
     },
     {
@@ -131,7 +131,7 @@ const AboutSection = () => {
               
               <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  Há mais de 5 anos, dedico minha carreira ao cuidado especializado dos pés, 
+                  Há mais de 15 anos, dedico minha carreira ao cuidado especializado dos pés, 
                   ajudando pessoas a recuperarem sua qualidade de vida e bem-estar. 
                   Minha jornada na podologia começou com uma simples missão: 
                   <strong className="text-primary"> proporcionar alívio e conforto através de cuidados especializados</strong>.
@@ -159,7 +159,7 @@ const AboutSection = () => {
                 onClick={handleWhatsApp}
                 className="bg-primary hover:bg-primary-hover text-white px-8 py-4 font-semibold shadow-card hover:shadow-hover transition-all duration-300 transform hover:scale-105"
               >
-                Conversar com Amanda
+                Conversar com Dra. Amanda Matos
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
               
@@ -212,11 +212,14 @@ const AboutSection = () => {
                   Credenciais Profissionais
                 </h3>
                 <div className="text-muted-foreground space-y-2">
-                  <p>• Graduada em Podologia - Universidade Reconhecida pelo MEC</p>
-                  <p>• Especialização em Tratamentos com Laser</p>
-                  <p>• Curso Avançado em Pé Diabético</p>
-                  <p>• Atualização Constante em Novas Técnicas</p>
-                  <p>• Membro da Associação Brasileira de Podólogos</p>
+                  <p>• Pos Graduada em Análises Clínicas e Microbiologia - Faveni</p>
+                  <p>• Graduada em Podologia Clinica - Universidade UniCesumar</p>
+                  <p>• Bacharel em Biomedicina - Universidade UniCesumar</p>
+                  <p>• Especialização em Farmacos na Podologia</p>
+                  <p>• Especialização em Pacientes Diabeticos</p>
+                  <p>• Especialização em Suplementação</p>
+                  <p>• Especialização em Podopediatria</p>
+                  <p>• Especialização em Manipulação</p>
                 </div>
               </div>
             </CardContent>

@@ -18,7 +18,7 @@ const PatientsSection = () => {
     const message = encodeURIComponent(
       `Olá! Gostaria de saber mais sobre os tratamentos para: ${audience}`
     );
-    window.open(`https://wa.me/5541999999999?text=${message}`, '_blank');
+    window.open(`https://wa.me/5541997312878?text=${message}`, '_blank');
   };
 
   const patientTypes = [

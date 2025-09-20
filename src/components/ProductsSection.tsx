@@ -1,83 +1,85 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { 
-  ShoppingCart, 
-  Star, 
-  Truck, 
-  Shield, 
+import {
+  ShoppingCart,
+  Star,
+  Truck,
+  Shield,
   Heart,
   ArrowRight,
   Package,
-  Sparkles
+  Sparkles,
+  MessageCircle
 } from 'lucide-react';
+
 
 const ProductsSection = () => {
   const handleWhatsApp = (product: string, price?: string) => {
     const message = encodeURIComponent(
       `Olá! Tenho interesse no produto: ${product}${price ? ` - ${price}` : ''}. Gostaria de mais informações.`
     );
-    window.open(`https://wa.me/5541999999999?text=${message}`, '_blank');
+    window.open(`https://wa.me/5541997312878?text=${message}`, '_blank');
   };
 
   const readyProducts = [
     {
-      name: "Kit Cuidados Diários",
-      description: "Kit completo para manutenção da saúde dos pés",
-      price: "R$ 89,90",
-      originalPrice: "R$ 120,00",
-      image: "🦶",
-      features: ["Creme hidratante", "Esfoliante suave", "Lima especializada", "Manual de cuidados"],
+      name: "Esfoliante Suave",
+      description: "Esfoliante para mãos, pés e cotovelos que remove impurezas e suaviza calosidades e asperezas.",
+      price: "R$ 39,90",
+      originalPrice: "R$ 57,90",
+      image: "/product/esfoliante.png",
+      features: ["Creme hidratante.", "Esfoliante suave.", "Lima especializada.", "Suavização de Calosidades."],
       badge: "Mais Vendido",
       badgeColor: "bg-green-500"
     },
     {
-      name: "Palmilhas Terapêuticas",
-      description: "Palmilhas ergonômicas para alívio e conforto",
-      price: "R$ 159,90",
-      originalPrice: "R$ 200,00",
-      image: "👟",
-      features: ["Material antialérgico", "Absorção de impacto", "Diferentes tamanhos", "Garantia de 6 meses"],
+      name: "Base Para Unhas",
+      description: "Ajuda a proteger e fortalecer as unhas, prevenindo microorganismos causadores de micoses.",
+      price: "R$ 39,90",
+      originalPrice: "R$ 59,90",
+      image: "/product/base-para-unha.png",
+      features: ["Ação antifúngica.", "Fortalecedora.", "Unhas mais Saudaveis.", "Dermatologicamente Testado."],
       badge: "Recomendado",
       badgeColor: "bg-blue-500"
     },
     {
-      name: "Creme Anti-Fúngico Premium",
-      description: "Fórmula avançada para prevenção de micoses",
-      price: "R$ 45,90",
-      originalPrice: "R$ 60,00",
-      image: "🧴",
-      features: ["Ação antifúngica", "Hidratação profunda", "Uso diário", "Dermatologicamente testado"],
+      name: "Oleo Para Unhas",
+      description: "AJuda a previnir microorganismos causadores de micoses na unha.",
+      price: "R$ 39,90",
+      originalPrice: "R$ 56,90",
+      image: "/product/oleo-para-unha.png",
+      features: ["Ação Antifúngica.", "Hidratação Profunda.", "Prevenção de Micoses.", "Dermatologicamente Testado."],
       badge: "Novidade",
       badgeColor: "bg-purple-500"
     },
     {
-      name: "Kit Unha Encravada",
-      description: "Solução completa para prevenção e alívio",
-      price: "R$ 75,90",
-      originalPrice: "R$ 95,00",
-      image: "✂️",
-      features: ["Cortador especializado", "Protetor de silicone", "Creme cicatrizante", "Instruções detalhadas"],
+      name: "Spray Para Unhas",
+      description: "AJuda a previnir microorganismos causadores de micoses na unha.",
+      price: "R$ 39,90",
+      originalPrice: "R$ 49,90",
+      image: "/product/sapray-para-unhas.png",
+      features: ["Proteção Prolongada.", "Ação Antifúngica.", "Previne Micoses.", "Rápida Absorção."],
       badge: "Promoção",
       badgeColor: "bg-red-500"
     },
     {
-      name: "Hidratante Intensivo Noturno",
-      description: "Reparação profunda durante o sono",
+      name: "Spray Hidra",
+      description: "Elimina microorganismos que causam mau odor, hidrata e alivia a transpiração excessiva.",
       price: "R$ 39,90",
-      originalPrice: "R$ 55,00",
-      image: "🌙",
-      features: ["Ação noturna", "Fórmula concentrada", "Absorção rápida", "Fragrância suave"],
+      originalPrice: "R$ 49,90",
+      image: "/product/Sprey-para-axicilas-e-pes.png",
+      features: ["Ação noturna.", "Fórmula concentrada.", "Absorção Rápida.", "Fragrância Suave."],
       badge: "Oferta",
       badgeColor: "bg-orange-500"
     },
     {
-      name: "Kit Pés Diabéticos",
-      description: "Cuidado especializado para diabéticos",
-      price: "R$ 139,90",
-      originalPrice: "R$ 180,00",
-      image: "💙",
-      features: ["Produtos específicos", "pH balanceado", "Testado clinicamente", "Aprovado por médicos"],
+      name: "Óleo de Girassol Ozonizado ",
+      description: "Auxilia na cicatrização, hidrata e regenera a pele, além de ter ação antibacteriana e antifúngica.",
+      price: "R$ 79,90",
+      originalPrice: "R$ 99,90",
+      image: "/product/ozon.png",
+      features: ["Efeito Cicatrizante.", "Ação Antibacteriana e Antifúngica.", "Propriedades Anti-inflamatórias.", "Hidratação e Regeneração da Pele."],
       badge: "Especializado",
       badgeColor: "bg-primary"
     }
@@ -98,7 +100,7 @@ const ProductsSection = () => {
     },
     {
       name: "Tratamentos Específicos",
-      description: "Manipulados para condições particulares",
+      description: "Manipulados exclusivos para condições particulares",
       features: ["Receituário médico", "Dosagem precisa", "Princípios ativos concentrados", "Monitoramento contínuo"],
       icon: "💊"
     }
@@ -119,7 +121,7 @@ const ProductsSection = () => {
             <span className="text-foreground">para Cuidados Completos</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Selecionamos os melhores produtos para complementar seus tratamentos. 
+            Selecionamos os melhores produtos para complementar seus tratamentos.
             Qualidade garantida e resultados comprovados.
           </p>
         </div>
@@ -146,7 +148,17 @@ const ProductsSection = () => {
                       {product.badge}
                     </Badge>
                   )}
-                  <div className="text-4xl mb-4">{product.image}</div>
+
+                  {/* Aqui trocamos o texto pela imagem */}
+                  <div className="mb-4">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="w-full h-40 object-contain rounded-md shadow-sm transition-transform duration-300 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
+
                   <CardTitle className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
                     {product.name}
                   </CardTitle>
@@ -154,7 +166,7 @@ const ProductsSection = () => {
                     {product.description}
                   </CardDescription>
                 </CardHeader>
-                
+
                 <CardContent className="space-y-4">
                   <div className="space-y-2">
                     {product.features.map((feature, featureIndex) => (
@@ -172,7 +184,7 @@ const ProductsSection = () => {
                     )}
                   </div>
 
-                  <Button 
+                  <Button
                     className="w-full bg-primary hover:bg-primary-hover text-white font-semibold transition-all duration-300 transform group-hover:scale-105"
                     onClick={() => handleWhatsApp(product.name, product.price)}
                   >
@@ -184,16 +196,14 @@ const ProductsSection = () => {
             ))}
           </div>
 
+
           {/* Trust Indicators */}
           <div className="mt-8 flex flex-wrap justify-center items-center gap-6 text-sm text-muted-foreground">
             <div className="flex items-center">
               <Shield className="w-4 h-4 text-green-500 mr-2" />
               <span>Produtos Originais</span>
             </div>
-            <div className="flex items-center">
-              <Truck className="w-4 h-4 text-blue-500 mr-2" />
-              <span>Entrega Rápida</span>
-            </div>
+            
             <div className="flex items-center">
               <Heart className="w-4 h-4 text-red-500 mr-2" />
               <span>Satisfação Garantida</span>
@@ -209,7 +219,7 @@ const ProductsSection = () => {
               Produtos Manipulados
             </h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Desenvolvemos produtos exclusivos baseados nas suas necessidades específicas. 
+              Desenvolvemos produtos exclusivos baseados nas suas necessidades específicas.
               Cada formulação é única e personalizada.
             </p>
           </div>
@@ -226,7 +236,7 @@ const ProductsSection = () => {
                     {product.description}
                   </CardDescription>
                 </CardHeader>
-                
+
                 <CardContent className="space-y-4">
                   <div className="space-y-2">
                     {product.features.map((feature, featureIndex) => (
@@ -237,7 +247,7 @@ const ProductsSection = () => {
                     ))}
                   </div>
 
-                  <Button 
+                  <Button
                     variant="outline"
                     className="w-full border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300"
                     onClick={() => handleWhatsApp(product.name)}
@@ -251,14 +261,23 @@ const ProductsSection = () => {
           </div>
 
           <div className="mt-12 text-center">
-            <Button 
-              size="lg"
-              onClick={() => handleWhatsApp("Consulta para produtos manipulados")}
-              className="bg-primary hover:bg-primary-hover text-white px-8 py-4 font-semibold shadow-card hover:shadow-hover transition-all duration-300 transform hover:scale-105"
-            >
-              Agendar Consulta para Manipulados
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
+            <Button
+  size="lg"
+  onClick={() => handleWhatsApp("Consulta para produtos manipulados")}
+  className="
+    w-full sm:w-auto
+    bg-primary hover:bg-primary-hover text-white
+    px-4 py-4 font-semibold shadow-card hover:shadow-hover
+    md:hover:scale-105
+    !whitespace-normal leading-snug text-center
+    rounded-xl flex items-center justify-center gap-2
+  "
+>
+  <MessageCircle className="w-5 h-5 flex-shrink-0" />
+  <span className="min-w-0">Agendar Consulta para Manipulados</span>
+  <ArrowRight className="w-5 h-5 flex-shrink-0" />
+</Button>
+
           </div>
         </div>
       </div>

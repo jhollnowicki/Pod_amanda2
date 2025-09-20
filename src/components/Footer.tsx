@@ -9,14 +9,14 @@ import {
   Mail,
   ExternalLink
 } from 'lucide-react';
-import logo from '@/assets/logo.jpg';
+import logo from '@/assets/logo-nova.png';
 
 const Footer = () => {
   const handleWhatsApp = () => {
     const message = encodeURIComponent(
       'Olá! Gostaria de mais informações sobre os serviços da Amanda Matos Podologia.'
     );
-    window.open(`https://wa.me/5541999999999?text=${message}`, '_blank');
+    window.open(`https://wa.me/5541997312878?text=${message}`, '_blank');
   };
 
   const currentYear = new Date().getFullYear();
@@ -62,7 +62,7 @@ const Footer = () => {
                 />
               </div>
               <p className="text-muted-foreground leading-relaxed">
-                Especialista em podologia com mais de 5 anos de experiência, 
+                Especialista em podologia com mais de 15 anos de experiência, 
                 dedicada ao cuidado integral da saúde dos seus pés com tecnologia 
                 de ponta e atendimento humanizado.
               </p>
@@ -78,7 +78,7 @@ const Footer = () => {
                 <Button 
                   variant="outline"
                   size="sm"
-                  onClick={() => window.open('https://instagram.com/amandamatospodologia', '_blank')}
+                  onClick={() => window.open('https://www.instagram.com/espaco.saudeebem_estar/', '_blank')}
                   className="border-pink-500 text-pink-500 hover:bg-pink-500 hover:text-white"
                 >
                   <Instagram className="w-4 h-4 mr-2" />
@@ -131,19 +131,20 @@ const Footer = () => {
                 <div className="flex items-start space-x-3">
                   <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                   <div className="text-sm text-muted-foreground">
-                    <p>Rua das Flores, 123 - Centro</p>
+                    <p>Rua Rio Eufrates, n°81 - sala 104 - Iguaçu</p>
+                    <p>Edifício Belaver 1° Andar</p>
                     <p>Fazenda Rio Grande - PR</p>
-                    <p>CEP: 83833-000</p>
+                    <p>CEP: 83833-088</p>
                   </div>
                 </div>
                 
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-primary flex-shrink-0" />
                   <a 
-                    href="tel:+5541999999999"
+                    href="tel:+5541997312878"
                     className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300"
                   >
-                    (41) 9 9999-9999
+                    (41) 3797-7333
                   </a>
                 </div>
                 
@@ -153,15 +154,15 @@ const Footer = () => {
                     onClick={handleWhatsApp}
                     className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300"
                   >
-                    WhatsApp: (41) 9 9999-9999
+                    WhatsApp: (41) 99731-2878
                   </button>
                 </div>
 
                 <div className="flex items-start space-x-3">
                   <Clock className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                   <div className="text-sm text-muted-foreground">
-                    <p>Seg-Sex: 08:00 - 18:00</p>
-                    <p>Sábado: 08:00 - 12:00</p>
+                    <p>Seg-Sex: 08:00 - 11:00|13:00 - 18:00</p>
+                    <p>Sábado: 08:00 - 13:00</p>
                     <p>Domingo: Fechado</p>
                   </div>
                 </div>

@@ -5,7 +5,7 @@ const WhatsAppFloat = () => {
     const message = encodeURIComponent(
       'Olá! Vim pelo site e gostaria de agendar uma consulta na Amanda Matos Podologia.'
     );
-    const whatsappUrl = `https://wa.me/5541999999999?text=${message}`;
+    const whatsappUrl = `https://wa.me/5541997312878?text=${message}`;
     window.open(whatsappUrl, '_blank');
   };
 

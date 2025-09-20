@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Phone, MessageCircle } from 'lucide-react';
-import logo from '@/assets/logo.jpg';
+import logo from '@/assets/logo-nova.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,7 +33,7 @@ const Header = () => {
             <img 
               src={logo} 
               alt="Amanda Matos Podologia e Saúde" 
-              className="h-12 w-auto"
+              className="h-16 w-auto"
             />
           </div>
 
@@ -55,7 +55,7 @@ const Header = () => {
             <Button
               variant="outline"
               size="sm"
-              onClick={() => window.open('tel:+5541999999999', '_self')}
+              onClick={() => window.open('tel:+5541997312878', '_self')}
               className="border-primary text-primary hover:bg-primary hover:text-white"
             >
               <Phone className="w-4 h-4 mr-2" />
@@ -63,7 +63,7 @@ const Header = () => {
             </Button>
             <Button
               size="sm"
-              onClick={() => window.open('https://wa.me/5541999999999?text=Olá! Gostaria de agendar uma consulta.', '_blank')}
+              onClick={() => window.open('https://wa.me/5541997312878?text=Olá! Gostaria de agendar uma consulta.', '_blank')}
               className="bg-primary hover:bg-primary-hover text-white"
             >
               <MessageCircle className="w-4 h-4 mr-2" />
@@ -100,14 +100,14 @@ const Header = () => {
               <div className="flex flex-col space-y-2 px-4 pt-4">
                 <Button
                   variant="outline"
-                  onClick={() => window.open('tel:+5541999999999', '_self')}
+                  onClick={() => window.open('tel:+5541997312878', '_self')}
                   className="border-primary text-primary hover:bg-primary hover:text-white w-full"
                 >
                   <Phone className="w-4 h-4 mr-2" />
                   Ligar Agora
                 </Button>
                 <Button
-                  onClick={() => window.open('https://wa.me/5541999999999?text=Olá! Gostaria de agendar uma consulta.', '_blank')}
+                  onClick={() => window.open('https://wa.me/5541997312878?text=Olá! Gostaria de agendar uma consulta.', '_blank')}
                   className="bg-primary hover:bg-primary-hover text-white w-full"
                 >
                   <MessageCircle className="w-4 h-4 mr-2" />

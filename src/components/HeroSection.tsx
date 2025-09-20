@@ -8,7 +8,7 @@ const HeroSection = () => {
     const message = encodeURIComponent(
       'Olá! Gostaria de agendar uma consulta na Amanda Matos Podologia.'
     );
-    window.open(`https://wa.me/5541999999999?text=${message}`, '_blank');
+    window.open(`https://wa.me/5541997312878?text=${message}`, '_blank');
   };
 
   const handleSchedule = () => {
@@ -45,11 +45,11 @@ const HeroSection = () => {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6">
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary">1000+</div>
+                <div className="text-3xl font-bold text-primary">5000+</div>
                 <div className="text-sm text-muted-foreground">Pacientes Atendidos</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary">5+</div>
+                <div className="text-3xl font-bold text-primary">15+</div>
                 <div className="text-sm text-muted-foreground">Anos de Experiência</div>
               </div>
               <div className="text-center">

@@ -11,7 +11,9 @@ import {
   Wifi,
   CreditCard,
   Shield,
-  Heart
+  Heart,
+  Accessibility,
+  Building
 } from 'lucide-react';
 
 const ContactSection = () => {
@@ -19,11 +21,11 @@ const ContactSection = () => {
     const message = encodeURIComponent(
       'Olá! Gostaria de agendar uma consulta na Amanda Matos Podologia. Qual a melhor data disponível?'
     );
-    window.open(`https://wa.me/5541999999999?text=${message}`, '_blank');
+    window.open(`https://wa.me/5541997312878?text=${message}`, '_blank');
   };
 
   const handlePhone = () => {
-    window.open('tel:+5541999999999', '_self');
+    window.open('tel:+554137977333', '_self');
   };
 
   const handleInstagram = () => {
@@ -31,18 +33,18 @@ const ContactSection = () => {
   };
 
   const handleMaps = () => {
-    const address = 'Rua das Flores, 123 - Centro, Fazenda Rio Grande - PR';
+    const address = 'Rua Rio Eufrates, n°81 - sala 104 - iguaçu Fazenda Rio Grande - PR';
     const encodedAddress = encodeURIComponent(address);
     window.open(`https://maps.google.com/?q=${encodedAddress}`, '_blank');
   };
 
   const workingHours = [
-    { day: 'Segunda-feira', hours: '08:00 - 18:00', available: true },
-    { day: 'Terça-feira', hours: '08:00 - 18:00', available: true },
-    { day: 'Quarta-feira', hours: '08:00 - 18:00', available: true },
-    { day: 'Quinta-feira', hours: '08:00 - 18:00', available: true },
-    { day: 'Sexta-feira', hours: '08:00 - 17:00', available: true },
-    { day: 'Sábado', hours: '08:00 - 12:00', available: true },
+    { day: 'Segunda-feira', hours: 'Manhã: 08:00 - 11:00 | Tarde: 13:00 - 19:00' , available: true },
+    { day: 'Terça-feira', hours: 'Manhã: 08:00 - 11:00 | Tarde: 13:00 - 19:00', available: true },
+    { day: 'Quarta-feira', hours: 'Manhã: 08:00 - 11:00 | Tarde: 13:00 - 19:00', available: true },
+    { day: 'Quinta-feira', hours: 'Manhã: 08:00 - 11:00 | Tarde: 13:00 - 19:00', available: true },
+    { day: 'Sexta-feira', hours: 'Manhã: 08:00 - 11:00 | Tarde: 13:00 - 19:00', available: true },
+    { day: 'Sábado', hours: '08:00 - 13:00', available: true },
     { day: 'Domingo', hours: 'Fechado', available: false }
   ];
 
@@ -52,7 +54,9 @@ const ContactSection = () => {
     { icon: Wifi, text: 'Wi-Fi gratuito' },
     { icon: CreditCard, text: 'Aceita cartões' },
     { icon: Shield, text: 'Ambiente seguro' },
-    { icon: Heart, text: 'Atendimento humanizado' }
+    { icon: Heart, text: 'Atendimento humanizado' },
+    { icon: Accessibility, text: 'Acessibilidade ', color: '#d89ca0' },
+    { icon: Building,   text: "Elevador disponível",         color: "#d89ca0" },
   ];
 
   return (
@@ -93,7 +97,7 @@ const ContactSection = () => {
                 </div>
               </CardHeader>
               <CardContent>
-                <p className="text-green-700 font-semibold mb-4">(41) 9 9999-9999</p>
+                <p className="text-green-700 font-semibold mb-4">(41) 99731-2878</p>
                 <Button 
                   className="w-full bg-green-500 hover:bg-green-600 text-white"
                   onClick={(e) => {
@@ -121,7 +125,7 @@ const ContactSection = () => {
                 </div>
               </CardHeader>
               <CardContent>
-                <p className="text-blue-700 font-semibold mb-4">(41) 9 9999-9999</p>
+                <p className="text-blue-700 font-semibold mb-4">(41) 3797-7333</p>
                 <Button 
                   variant="outline"
                   className="w-full border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white"
@@ -184,9 +188,10 @@ const ContactSection = () => {
               <CardContent className="space-y-4">
                 <div>
                   <p className="font-semibold text-foreground">Amanda Matos - Podologia e Saúde</p>
-                  <p className="text-muted-foreground">Rua das Flores, 123 - Centro</p>
+                  <p className="text-muted-foreground">Rua Rio Eufrates, n°81 - sala 104 - Iguaçu</p>
+                  <p className="text-muted-foreground">Edifício Belaver 1° andar</p>
                   <p className="text-muted-foreground">Fazenda Rio Grande - PR</p>
-                  <p className="text-muted-foreground">CEP: 83833-000</p>
+                  <p className="text-muted-foreground">CEP: 83833-088</p>
                 </div>
                 <Button 
                   variant="outline"

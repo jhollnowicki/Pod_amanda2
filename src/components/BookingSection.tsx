@@ -7,11 +7,11 @@ import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Calendar } from '@/components/ui/calendar';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
-import { 
-  Calendar as CalendarIcon, 
-  Clock, 
-  User, 
-  Phone, 
+import {
+  Calendar as CalendarIcon,
+  Clock,
+  User,
+  Phone,
   MessageCircle,
   CheckCircle,
   ArrowRight
@@ -54,7 +54,7 @@ const BookingSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!selectedDate || !formData.name || !formData.phone || !formData.service || !formData.time) {
       alert('Por favor, preencha todos os campos obrigatórios.');
       return;
@@ -62,7 +62,7 @@ const BookingSection = () => {
 
     const selectedService = services.find(s => s.value === formData.service);
     const dateFormatted = format(selectedDate, "dd 'de' MMMM 'de' yyyy", { locale: ptBR });
-    
+
     const message = encodeURIComponent(
       `🦶 *AGENDAMENTO - AMANDA MATOS PODOLOGIA*\n\n` +
       `👤 *Nome:* ${formData.name}\n` +
@@ -77,8 +77,8 @@ const BookingSection = () => {
       `\n✅ *Por favor, confirme este agendamento!*`
     );
 
-    window.open(`https://wa.me/5541999999999?text=${message}`, '_blank');
-    
+    window.open(`https://wa.me/5541997312878?text=${message}`, '_blank');
+
     // Reset form
     setFormData({ name: '', phone: '', email: '', service: '', time: '', notes: '' });
     setSelectedDate(undefined);
@@ -108,7 +108,7 @@ const BookingSection = () => {
             <span className="text-foreground">de Forma Rápida e Fácil</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Selecione o serviço desejado, escolha a melhor data e horário para você. 
+            Selecione o serviço desejado, escolha a melhor data e horário para você.
             Nossa equipe entrará em contato para confirmar seu agendamento.
           </p>
         </div>
@@ -133,7 +133,7 @@ const BookingSection = () => {
                     <User className="w-5 h-5 mr-2 text-primary" />
                     Dados Pessoais
                   </h3>
-                  
+
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="name" className="text-foreground font-medium">
@@ -149,7 +149,7 @@ const BookingSection = () => {
                         required
                       />
                     </div>
-                    
+
                     <div className="space-y-2">
                       <Label htmlFor="phone" className="text-foreground font-medium">
                         Telefone/WhatsApp *
@@ -159,7 +159,7 @@ const BookingSection = () => {
                         type="tel"
                         value={formData.phone}
                         onChange={(e) => handleInputChange('phone', e.target.value)}
-                        placeholder="(41) 99999-9999"
+                        placeholder="(41) 99731-2878"
                         className="border-brand-gray focus:border-primary"
                         required
                       />
@@ -187,7 +187,7 @@ const BookingSection = () => {
                     <CheckCircle className="w-5 h-5 mr-2 text-primary" />
                     Serviço Desejado
                   </h3>
-                  
+
                   <div className="space-y-2">
                     <Label className="text-foreground font-medium">
                       Escolha o Serviço *
@@ -236,7 +236,7 @@ const BookingSection = () => {
                     <Clock className="w-5 h-5 mr-2 text-primary" />
                     Data e Horário
                   </h3>
-                  
+
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label className="text-foreground font-medium">
@@ -270,7 +270,7 @@ const BookingSection = () => {
                         Atendemos de segunda a sábado
                       </p>
                     </div>
-                    
+
                     <div className="space-y-2">
                       <Label className="text-foreground font-medium">
                         Escolha o Horário *
@@ -311,16 +311,24 @@ const BookingSection = () => {
 
                 {/* Submit Button */}
                 <div className="text-center pt-6">
-                  <Button 
+                  <Button
                     type="submit"
                     size="lg"
-                    className="bg-primary hover:bg-primary-hover text-white px-8 py-4 font-semibold shadow-card hover:shadow-hover transition-all duration-300 transform hover:scale-105"
+                    className="
+                        w-full sm:w-auto
+                        bg-[#D6A7AF] text-white hover:opacity-90
+                        px-4 py-4 font-semibold shadow-card hover:shadow-hover
+                        md:hover:scale-105
+                        !whitespace-normal break-words text-center leading-snug
+                        rounded-xl
+                      "
                   >
-                    <MessageCircle className="w-5 h-5 mr-3" />
-                    Enviar Agendamento pelo WhatsApp
-                    <ArrowRight className="w-5 h-5 ml-3" />
+                    <MessageCircle className="w-5 h-5 mr-3 flex-shrink-0" />
+                    <span className="block min-w-0">Enviar Agendamento pelo WhatsApp</span>
+                    <ArrowRight className="w-5 h-5 ml-3 flex-shrink-0" />
                   </Button>
                   
+
                   <p className="text-sm text-muted-foreground mt-4">
                     ✅ Ao enviar, você será direcionado ao WhatsApp para confirmação
                   </p>
