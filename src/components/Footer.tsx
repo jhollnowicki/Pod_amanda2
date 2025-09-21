@@ -208,7 +208,7 @@ const Footer = () => {
           <div className="mt-4 pt-4 border-t border-brand-gray">
             <div className="text-xs text-muted-foreground text-center space-y-2">
               <p>
-                CNPJ: 00.000.000/0001-00 | Registro Profissional: COREN-PR 000000
+                CNPJ: 36.550.445/0001-92 | Registro Profissional: CBO 3221-10
               </p>
               <p>
                 Este site respeita sua privacidade. Não compartilhamos seus dados pessoais. 

@@ -32,14 +32,14 @@ const BookingSection = () => {
   });
 
   const services = [
-    { value: 'unha-encravada', label: 'Unhas Encravadas', duration: '30 min', price: 'R$ 80,00' },
-    { value: 'laser-verrugas', label: 'Laser para Verrugas', duration: '45 min', price: 'R$ 120,00' },
-    { value: 'pe-diabetico', label: 'Cuidados Pé Diabético', duration: '60 min', price: 'R$ 150,00' },
-    { value: 'calos', label: 'Calos e Calosidades', duration: '40 min', price: 'R$ 90,00' },
-    { value: 'micose-unhas', label: 'Micose das Unhas', duration: '45 min', price: 'R$ 110,00' },
-    { value: 'limpeza-geral', label: 'Limpeza Geral dos Pés', duration: '50 min', price: 'R$ 100,00' },
-    { value: 'consulta-avaliacao', label: 'Consulta e Avaliação', duration: '40 min', price: 'R$ 70,00' },
-    { value: 'produto-manipulado', label: 'Produto Manipulado', duration: '20 min', price: 'Consultar' }
+    { value: 'unha-encravada', label: 'Unhas Encravadas'  },
+    { value: 'laser-verrugas', label: 'Laser para Verrugas' },
+    { value: 'pe-diabetico', label: 'Cuidados Pé Diabético' },
+    { value: 'calos', label: 'Calos e Calosidades' },
+    { value: 'micose-unhas', label: 'Micose das Unhas' },
+    { value: 'limpeza-geral', label: 'Limpeza Geral dos Pés' },
+    { value: 'consulta-avaliacao', label: 'Consulta e Avaliação' },
+    { value: 'produto-manipulado', label: 'Produto Manipulado' }
   ];
 
   // Horários disponíveis (simulando agenda)
@@ -69,8 +69,6 @@ const BookingSection = () => {
       `📞 *Telefone:* ${formData.phone}\n` +
       `${formData.email ? `📧 *Email:* ${formData.email}\n` : ''}` +
       `🔧 *Serviço:* ${selectedService?.label}\n` +
-      `⏱️ *Duração:* ${selectedService?.duration}\n` +
-      `💰 *Valor:* ${selectedService?.price}\n` +
       `📅 *Data:* ${dateFormatted}\n` +
       `🕐 *Horário:* ${formData.time}\n` +
       `${formData.notes ? `📝 *Observações:* ${formData.notes}\n` : ''}` +
@@ -201,9 +199,7 @@ const BookingSection = () => {
                           <SelectItem key={service.value} value={service.value}>
                             <div className="flex flex-col">
                               <span className="font-medium">{service.label}</span>
-                              <span className="text-sm text-muted-foreground">
-                                {service.duration} • {service.price}
-                              </span>
+                              
                             </div>
                           </SelectItem>
                         ))}
@@ -217,12 +213,6 @@ const BookingSection = () => {
                         <div className="flex justify-between items-center">
                           <div>
                             <h4 className="font-semibold text-foreground">{selectedService.label}</h4>
-                            <p className="text-sm text-muted-foreground">
-                              Duração estimada: {selectedService.duration}
-                            </p>
-                          </div>
-                          <div className="text-right">
-                            <div className="text-lg font-bold text-primary">{selectedService.price}</div>
                           </div>
                         </div>
                       </CardContent>

@@ -29,25 +29,19 @@ const ServicesSection = () => {
       bgColor: "bg-pink-50",
       services: [
         {
+          images: ["/service/unha-encravada-antes.jpg", "/service/unha-encravada-depois.jpg"],
           name: "Unhas Encravadas",
           description: "Tratamento especializado para alívio imediato da dor",
-          features: ["Técnica indolor", "Resultado imediato", "Prevenção de recidiva"]
+          features: ["Técnica indolor", "Resultado imediato", "Prevenção de recidiva"],
+
         },
+        
         {
-          name: "Micose das Unhas",
-          description: "Combate eficaz contra fungos nas unhas",
-          features: ["Laser especializado", "Tratamento seguro", "Resultados duradouros"]
-        },
-        {
-          name: "Cuidados com Cutículas",
+          name: "Podopediatria",
           description: "Manutenção profissional para unhas saudáveis",
-          features: ["Técnica profissional", "Produtos esterilizados", "Cuidado especializado"]
-        },
-        {
-          name: "Antes e Depois",
-          description: "Resultados reais do tratamento",
+          features: ["Atendimento especializado em pés infantis", "Técnicas delicadas e seguras", "Prevenção de deformidades nas unhas"],
           images: ["/service/correçao-de-unha-encravada.jpg", "/service/correça-unha-durante.jpg"]
-        }
+        },
       ]
     },
     {
@@ -59,17 +53,20 @@ const ServicesSection = () => {
         {
           name: "Laser para Verrugas",
           description: "Remoção precisa e eficaz de verrugas plantares",
-          features: ["Tecnologia avançada", "Procedimento rápido", "Mínimo desconforto"]
+          features: ["Tecnologia avançada", "Procedimento rápido", "Mínimo desconforto"],
+          images: ["/service/verruga-antes.jpg", "/service/verruga-depois.jpg"],
         },
         {
-          name: "Laser para Micoses",
-          description: "Tratamento de última geração para fungos",
-          features: ["Alta eficácia", "Sem efeitos colaterais", "Resultados visíveis"]
+          name: "Tratamento de Fungos a Laser",
+          description: "Combate eficaz contra fungos nas unhas",
+          features: ["Laser especializado", "Tratamento seguro", "Resultados duradouros"],
+          images: ["/service/Fungos-antes.jpg", "/service/fungos-depois.jpg"]
         },
         {
           name: "Terapia com LED",
           description: "Aceleração da cicatrização e regeneração",
-          features: ["Cicatrização rápida", "Anti-inflamatório", "Regeneração celular"]
+          features: ["Cicatrização rápida", "Anti-inflamatório", "Regeneração celular"],
+          images: ["/service/led-terapia.jpg"]
         }
       ]
     },
@@ -82,7 +79,8 @@ const ServicesSection = () => {
         {
           name: "Calos e Calosidades",
           description: "Remoção profissional e prevenção",
-          features: ["Técnica especializada", "Alívio imediato", "Orientação preventiva"]
+          features: ["Técnica especializada", "Alívio imediato", "Orientação preventiva"],
+          images: ["/service/calos-antes.jpg", "/service/calos-durante.jpg"],
         },
         {
           name: "Fissuras nos Pés",
@@ -94,11 +92,6 @@ const ServicesSection = () => {
           description: "Remoção segura de helomas",
           features: ["Procedimento indolor", "Técnica precisa", "Resultado definitivo"]
         },
-        {
-          name: "Antes e Depois",
-          description: "Resultados reais do tratamento",
-          images: ["/service/calos-antes.jpg", "/service/calos-durante.jpg"]
-        }
       ]
     },
     {
@@ -110,23 +103,21 @@ const ServicesSection = () => {
         {
           name: "Avaliação Preventiva",
           description: "Cuidado especializado para diabéticos",
-          features: ["Exame completo", "Protocolo específico", "Prevenção de complicações"]
+          features: ["Exame completo", "Protocolo específico", "Prevenção de complicações"],
+          images: ["/service/prevencao.png"]
         },
         {
           name: "Úlceras Diabéticas",
           description: "Tratamento especializado de feridas",
-          features: ["Curativos especiais", "Acompanhamento frequente", "Protocolo médico"]
+          features: ["Curativos especiais", "Acompanhamento frequente", "Protocolo médico"],
+          images: ["/service/pes-diabeticos-antes.jpg", "/service/pes-diabeticos-depois.jpg"]
         },
         {
           name: "Orientação Preventiva",
           description: "Educação para cuidados diários",
-          features: ["Instruções personalizadas", "Material educativo", "Acompanhamento contínuo"]
+          features: ["Instruções personalizadas", "Material educativo", "Acompanhamento contínuo"],
+          images: ["/service/orientacao.png"]
         },
-        {
-          name: "Antes e Depois",
-          description: "Resultados reais do tratamento",
-          images: ["/service/pes-diabeticos-antes.jpg", "/service/pes-diabeticos-depois.jpg"]
-        }
 
       ]
     }
@@ -176,6 +167,14 @@ const ServicesSection = () => {
                       className="card-hover bg-white border-0 overflow-hidden group cursor-pointer"
                       onClick={() => handleWhatsApp(service.name)}
                     >
+                      {/* TOPO COM IMAGEM QUADRADA */}
+                      {service.images ? (
+                        <BeforeAfterSlider images={service.images} />
+                      ) : (
+                        <ServiceThumb image={(service as any).image} Icon={IconComponent} />
+                      )}
+
+                      {/* TÍTULO + DESCRIÇÃO */}
                       <CardHeader className="pb-4">
                         <CardTitle className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
                           {service.name}
@@ -184,13 +183,13 @@ const ServicesSection = () => {
                           {service.description}
                         </CardDescription>
                       </CardHeader>
+
+                      {/* CONTEÚDO (features ou botão) */}
                       <CardContent className="space-y-4">
-                        {service.images ? (
-                          <BeforeAfterSlider images={service.images} />
-                        ) : (
+                        {service.features && (
                           <>
                             <div className="space-y-2">
-                              {service.features.map((feature, featureIndex) => (
+                              {service.features.map((feature: string, featureIndex: number) => (
                                 <div key={featureIndex} className="flex items-center space-x-2">
                                   <Check className="w-4 h-4 text-primary flex-shrink-0" />
                                   <span className="text-sm text-muted-foreground">{feature}</span>
@@ -213,8 +212,8 @@ const ServicesSection = () => {
                         )}
                       </CardContent>
 
-
                     </Card>
+
                   ))}
                 </div>
               </div>
@@ -233,9 +232,9 @@ const ServicesSection = () => {
               Agende uma avaliação completa hoje mesmo.
             </p>
             <Button
-  size="lg"
-  onClick={() => handleWhatsApp("Consulta personalizada")}
-  className="
+              size="lg"
+              onClick={() => handleWhatsApp("Consulta personalizada")}
+              className="
     w-full sm:w-auto
     bg-primary hover:bg-primary-hover text-white
     px-4 py-4 font-semibold shadow-card hover:shadow-hover
@@ -243,10 +242,10 @@ const ServicesSection = () => {
     !whitespace-normal break-words text-center leading-snug
     rounded-xl inline-flex items-center justify-center gap-2 mx-auto
   "
->
-  <span className="min-w-0">Agendar Avaliação Personalizada</span>
-  <ArrowRight className="w-5 h-5 flex-shrink-0" />
-</Button>
+            >
+              <span className="min-w-0">Agendar Avaliação Personalizada</span>
+              <ArrowRight className="w-5 h-5 flex-shrink-0" />
+            </Button>
 
 
           </div>
@@ -259,23 +258,28 @@ const BeforeAfterSlider = ({ images }: { images: string[] }) => {
   const [i, setI] = useState(0);
   const labels = ["Antes", "Depois"];
 
+  // só roda o intervalo se tiver mais de 1 imagem
   useEffect(() => {
-    const t = setInterval(() => setI(p => (p + 1) % images.length), 4000);
-    return () => clearInterval(t);
+    if (images.length > 1) {
+      const t = setInterval(() => setI(p => (p + 1) % images.length), 4000);
+      return () => clearInterval(t);
+    }
   }, [images.length]);
 
   return (
     <div className="space-y-2">
-      {/* badge fora da imagem */}
-      <span className="inline-block px-3 py-1 text-sm font-semibold rounded-full bg-[#D6A7AF] text-white">
-        {labels[i]}
-      </span>
+      {/* só mostra badge se houver pelo menos 2 imagens */}
+      {images.length > 1 && (
+        <span className="inline-block px-3 py-1 text-sm font-semibold rounded-full bg-[#D6A7AF] text-white">
+          {labels[i]}
+        </span>
+      )}
 
-      {/* container com recorte arredondado */}
+      {/* container da imagem */}
       <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden ring-1 ring-[#EAD1D6]/60">
         <img
           src={images[i]}
-          alt={labels[i]}
+          alt={labels[i] || "Imagem"}
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
       </div>
@@ -283,6 +287,25 @@ const BeforeAfterSlider = ({ images }: { images: string[] }) => {
   );
 };
 
+
+const ServiceThumb = ({ image, Icon }: { image?: string; Icon: any }) => {
+  return (
+    <div className="relative w-full aspect-square overflow-hidden">
+      {image ? (
+        <img
+          src={image}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          loading="lazy"
+        />
+      ) : (
+        <div className="absolute inset-0 flex items-center justify-center bg-muted/30">
+          <Icon className="w-10 h-10 text-muted-foreground" />
+        </div>
+      )}
+    </div>
+  );
+};
 
 
 
