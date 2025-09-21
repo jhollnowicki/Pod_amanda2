@@ -35,12 +35,17 @@ const ServicesSection = () => {
           features: ["Técnica indolor", "Resultado imediato", "Prevenção de recidiva"],
 
         },
-        
         {
           name: "Podopediatria",
           description: "Manutenção profissional para unhas saudáveis",
           features: ["Atendimento especializado em pés infantis", "Técnicas delicadas e seguras", "Prevenção de deformidades nas unhas"],
           images: ["/service/correçao-de-unha-encravada.jpg", "/service/correça-unha-durante.jpg"]
+        },
+        {
+          name: "Correção de Curvatura com Órtese",
+          description: "Tratamento especializado que corrige a curvatura da unha, proporcionando alinhamento saudável e duradouro.",
+          features: ["Técnica indolor e segura", "Técnica indolor e segura", "Técnica indolor e segura"],
+          images: ["/service/curvatura-unha-antes.jpg", "/service/curvatura-unha-depois.jpg"]
         },
       ]
     },
@@ -83,14 +88,16 @@ const ServicesSection = () => {
           images: ["/service/calos-antes.jpg", "/service/calos-durante.jpg"],
         },
         {
-          name: "Fissuras nos Pés",
-          description: "Tratamento para regeneração da pele",
-          features: ["Hidratação profunda", "Cicatrização acelerada", "Prevenção de infecções"]
+          name: "Peeling Podal",
+          description: "Tratamento que remove a pele ressecada e áspera, deixando os pés mais macios, hidratados e renovados.",
+          features: ["Elimina células mortas e asperezas", "Hidratação profunda e duradoura", "Sensação imediata de conforto"],
+          images: ["/service/rachadura-antes.jpg", "/service/rachadura-depois.jpg"],
         },
         {
           name: "Olho de Peixe",
           description: "Remoção segura de helomas",
-          features: ["Procedimento indolor", "Técnica precisa", "Resultado definitivo"]
+          features: ["Procedimento indolor", "Técnica precisa", "Resultado definitivo"],
+          images: ["/service/olho-antes.jpg", "/service/olho-depois.jpg"],
         },
       ]
     },

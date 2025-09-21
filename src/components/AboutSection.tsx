@@ -15,7 +15,7 @@ import amandaPortrait from '@/assets/amanda-portrait.jpg';
 const AboutSection = () => {
   const handleWhatsApp = () => {
     const message = encodeURIComponent(
-      'Olá Amanda! Gostaria de conversar com você sobre meus cuidados podológicos.'
+      'Olá Dra. Amanda! Gostaria de conversar com você sobre meus cuidados podológicos.'
     );
     window.open(`https://wa.me/5541997312878?text=${message}`, '_blank');
   };
@@ -76,9 +76,9 @@ const AboutSection = () => {
             Sobre a Profissional
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            <span className="text-gradient-pink">Conheça Amanda Matos</span>
+            <span className="text-gradient-pink">Conheça Dra. Amanda Matos</span>
             <br />
-            <span className="text-foreground">Especialista em Podologia</span>
+            <span className="text-foreground">Biomédica e Podologista</span>
           </h2>
         </div>
 
@@ -126,7 +126,7 @@ const AboutSection = () => {
           <div className="space-y-8">
             <div className="space-y-6">
               <h3 className="text-3xl font-bold text-foreground">
-                Uma Paixão Pelos Cuidados dos Pés
+                Uma Paixão Pelos Cuidados dos Pés e sua Saúde.
               </h3>
               
               <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">

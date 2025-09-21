@@ -6,13 +6,13 @@ import feetCare from '@/assets/feet-care.jpg';
 const HeroSection = () => {
   const handleWhatsApp = () => {
     const message = encodeURIComponent(
-      'Olá! Gostaria de agendar uma consulta na Amanda Matos Podologia.'
+      'Olá! Gostaria de agendar uma consulta no Espaço Podologia Amanda Matos.'
     );
     window.open(`https://wa.me/5541997312878?text=${message}`, '_blank');
   };
 
   const handleSchedule = () => {
-    const contactSection = document.querySelector('#contact');
+    const contactSection = document.querySelector('#booking');
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth' });
     }

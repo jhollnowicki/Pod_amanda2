@@ -44,7 +44,7 @@ const ProductsSection = () => {
       badgeColor: "bg-blue-500"
     },
     {
-      name: "Oleo Para Unhas",
+      name: "Óleo Para Unhas",
       description: "AJuda a previnir microorganismos causadores de micoses na unha.",
       price: "R$ 39,90",
       originalPrice: "R$ 56,90",
@@ -87,13 +87,13 @@ const ProductsSection = () => {
 
   const customProducts = [
     {
-      name: "Cremes Personalizados",
+      name: "Cremes Manipulados",
       description: "Fórmulas desenvolvidas especialmente para suas necessidades",
       features: ["Análise individual", "Ingredientes selecionados", "Concentração personalizada", "Acompanhamento profissional"],
       icon: "🧪"
     },
     {
-      name: "Tratamentos Específicos",
+      name: "Tratamentos Manipulados",
       description: "Manipulados exclusivos para condições particulares",
       features: ["Receituário médico", "Dosagem precisa", "Princípios ativos concentrados", "Monitoramento contínuo"],
       icon: "💊"

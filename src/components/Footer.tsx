@@ -14,7 +14,7 @@ import logo from '@/assets/logo-nova.png';
 const Footer = () => {
   const handleWhatsApp = () => {
     const message = encodeURIComponent(
-      'Olá! Gostaria de mais informações sobre os serviços da Amanda Matos Podologia.'
+      'Olá! Gostaria de mais informações sobre os serviços do Espaço Podologia Amanda Matos.'
     );
     window.open(`https://wa.me/5541997312878?text=${message}`, '_blank');
   };

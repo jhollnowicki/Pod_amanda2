@@ -19,7 +19,7 @@ import {
 const ContactSection = () => {
   const handleWhatsApp = () => {
     const message = encodeURIComponent(
-      'Olá! Gostaria de agendar uma consulta na Amanda Matos Podologia. Qual a melhor data disponível?'
+      'Olá! Gostaria de agendar uma consulta no Espaço Podologia Amanda Matos. Qual a melhor data disponível?'
     );
     window.open(`https://wa.me/5541997312878?text=${message}`, '_blank');
   };

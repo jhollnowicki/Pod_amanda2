@@ -3,7 +3,7 @@ import { MessageCircle } from 'lucide-react';
 const WhatsAppFloat = () => {
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent(
-      'Olá! Vim pelo site e gostaria de agendar uma consulta na Amanda Matos Podologia.'
+      'Olá! Vim pelo site e gostaria de agendar uma consulta com a Dra. Amanda Matos.'
     );
     const whatsappUrl = `https://wa.me/5541997312878?text=${message}`;
     window.open(whatsappUrl, '_blank');
