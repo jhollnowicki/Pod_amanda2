@@ -93,12 +93,6 @@ const ProductsSection = () => {
       icon: "🧪"
     },
     {
-      name: "Palmilhas Sob Medida",
-      description: "Moldadas especificamente para a anatomia dos seus pés",
-      features: ["Moldagem 3D", "Materiais premium", "Correção postural", "Garantia estendida"],
-      icon: "📐"
-    },
-    {
       name: "Tratamentos Específicos",
       description: "Manipulados exclusivos para condições particulares",
       features: ["Receituário médico", "Dosagem precisa", "Princípios ativos concentrados", "Monitoramento contínuo"],
@@ -224,7 +218,7 @@ const ProductsSection = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {customProducts.map((product, index) => (
               <Card key={index} className="bg-white border-0 shadow-card hover:shadow-hover transition-all duration-300">
                 <CardHeader className="text-center pb-4">
