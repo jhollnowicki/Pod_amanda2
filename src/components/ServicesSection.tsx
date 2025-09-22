@@ -29,7 +29,7 @@ const ServicesSection = () => {
       bgColor: "bg-pink-50",
       services: [
         {
-          images: ["/service/unha-encravada-antes.jpg", "/service/unha-encravada-depois.jpg"],
+          images: ["/service/unha-encravada-antes.webp", "/service/unha-encravada-depois.webp"],
           name: "Unhas Encravadas",
           description: "Tratamento especializado para alívio imediato da dor",
           features: ["Técnica indolor", "Resultado imediato", "Prevenção de recidiva"],
@@ -39,13 +39,13 @@ const ServicesSection = () => {
           name: "Podopediatria",
           description: "Manutenção profissional para unhas saudáveis",
           features: ["Atendimento especializado em pés infantis", "Técnicas delicadas e seguras", "Prevenção de deformidades nas unhas"],
-          images: ["/service/correçao-de-unha-encravada.jpg", "/service/correça-unha-durante.jpg"]
+          images: ["/service/correçao-de-unha-encravada.webp", "/service/correça-unha-durante.webp"]
         },
         {
           name: "Correção de Curvatura com Órtese",
           description: "Tratamento especializado que corrige a curvatura da unha, proporcionando alinhamento saudável e duradouro.",
           features: ["Técnica indolor e segura", "Técnica indolor e segura", "Técnica indolor e segura"],
-          images: ["/service/curvatura-unha-antes.jpg", "/service/curvatura-unha-depois.jpg"]
+          images: ["/service/curvatura-unha-antes.webp", "/service/curvatura-unha-depois.webp"]
         },
       ]
     },
@@ -59,19 +59,19 @@ const ServicesSection = () => {
           name: "Laser para Verrugas",
           description: "Remoção precisa e eficaz de verrugas plantares",
           features: ["Tecnologia avançada", "Procedimento rápido", "Mínimo desconforto"],
-          images: ["/service/verruga-antes.jpg", "/service/verruga-depois.jpg"],
+          images: ["/service/verruga-antes.webp", "/service/verruga-depois.webp"],
         },
         {
           name: "Tratamento de Fungos a Laser",
           description: "Combate eficaz contra fungos nas unhas",
           features: ["Laser especializado", "Tratamento seguro", "Resultados duradouros"],
-          images: ["/service/Fungos-antes.jpg", "/service/fungos-depois.jpg"]
+          images: ["/service/Fungos-antes.webp", "/service/fungos-depois.webp"]
         },
         {
           name: "Terapia com LED",
           description: "Aceleração da cicatrização e regeneração",
           features: ["Cicatrização rápida", "Anti-inflamatório", "Regeneração celular"],
-          images: ["/service/led-terapia.jpg"]
+          images: ["/service/led-terapia.webp"]
         }
       ]
     },
@@ -85,19 +85,19 @@ const ServicesSection = () => {
           name: "Calos e Calosidades",
           description: "Remoção profissional e prevenção",
           features: ["Técnica especializada", "Alívio imediato", "Orientação preventiva"],
-          images: ["/service/calos-antes.jpg", "/service/calos-durante.jpg"],
+          images: ["/service/calos-antes.webp", "/service/calos-durante.webp"],
         },
         {
           name: "Peeling Podal",
           description: "Tratamento que remove a pele ressecada e áspera, deixando os pés mais macios, hidratados e renovados.",
           features: ["Elimina células mortas e asperezas", "Hidratação profunda e duradoura", "Sensação imediata de conforto"],
-          images: ["/service/rachadura-antes.jpg", "/service/rachadura-depois.jpg"],
+          images: ["/service/rachadura-antes.webp", "/service/rachadura-depois.webp"],
         },
         {
           name: "Olho de Peixe",
           description: "Remoção segura de helomas",
           features: ["Procedimento indolor", "Técnica precisa", "Resultado definitivo"],
-          images: ["/service/olho-antes.jpg", "/service/olho-depois.jpg"],
+          images: ["/service/olho-antes.webp", "/service/olho-depois.webp"],
         },
       ]
     },
@@ -111,19 +111,19 @@ const ServicesSection = () => {
           name: "Avaliação Preventiva",
           description: "Cuidado especializado para diabéticos",
           features: ["Exame completo", "Protocolo específico", "Prevenção de complicações"],
-          images: ["/service/prevencao.png"]
+          images: ["/service/prevencao.webp"]
         },
         {
           name: "Úlceras Diabéticas",
           description: "Tratamento especializado de feridas",
           features: ["Curativos especiais", "Acompanhamento frequente", "Protocolo médico"],
-          images: ["/service/pes-diabeticos-antes.jpg", "/service/pes-diabeticos-depois.jpg"]
+          images: ["/service/pes-diabeticos-antes.webp", "/service/pes-diabeticos-depois.webp"]
         },
         {
           name: "Orientação Preventiva",
           description: "Educação para cuidados diários",
           features: ["Instruções personalizadas", "Material educativo", "Acompanhamento contínuo"],
-          images: ["/service/orientacao.png"]
+          images: ["/service/orientacao.webp"]
         },
 
       ]

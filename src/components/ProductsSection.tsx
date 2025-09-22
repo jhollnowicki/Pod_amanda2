@@ -28,7 +28,7 @@ const ProductsSection = () => {
       description: "Esfoliante para mãos, pés e cotovelos que remove impurezas e suaviza calosidades e asperezas.",
       price: "R$ 39,90",
       originalPrice: "R$ 57,90",
-      image: "/product/esfoliante.png",
+      image: "/product/esfoliante.webp",
       features: ["Creme hidratante.", "Esfoliante suave.", "Lima especializada.", "Suavização de Calosidades."],
       badge: "Mais Vendido",
       badgeColor: "bg-green-500"
@@ -38,7 +38,7 @@ const ProductsSection = () => {
       description: "Ajuda a proteger e fortalecer as unhas, prevenindo microorganismos causadores de micoses.",
       price: "R$ 39,90",
       originalPrice: "R$ 59,90",
-      image: "/product/base-para-unha.png",
+      image: "/product/base-para-unha.webp",
       features: ["Ação antifúngica.", "Fortalecedora.", "Unhas mais Saudaveis.", "Dermatologicamente Testado."],
       badge: "Recomendado",
       badgeColor: "bg-blue-500"
@@ -48,7 +48,7 @@ const ProductsSection = () => {
       description: "AJuda a previnir microorganismos causadores de micoses na unha.",
       price: "R$ 39,90",
       originalPrice: "R$ 56,90",
-      image: "/product/oleo-para-unha.png",
+      image: "/product/oleo-para-unha.webp",
       features: ["Ação Antifúngica.", "Hidratação Profunda.", "Prevenção de Micoses.", "Dermatologicamente Testado."],
       badge: "Novidade",
       badgeColor: "bg-purple-500"
@@ -58,7 +58,7 @@ const ProductsSection = () => {
       description: "AJuda a previnir microorganismos causadores de micoses na unha.",
       price: "R$ 39,90",
       originalPrice: "R$ 49,90",
-      image: "/product/sapray-para-unhas.png",
+      image: "/product/sapray-para-unhas.webp",
       features: ["Proteção Prolongada.", "Ação Antifúngica.", "Previne Micoses.", "Rápida Absorção."],
       badge: "Promoção",
       badgeColor: "bg-red-500"
@@ -68,7 +68,7 @@ const ProductsSection = () => {
       description: "Elimina microorganismos que causam mau odor, hidrata e alivia a transpiração excessiva.",
       price: "R$ 39,90",
       originalPrice: "R$ 49,90",
-      image: "/product/Sprey-para-axicilas-e-pes.png",
+      image: "/product/Sprey-para-axicilas-e-pes.webp",
       features: ["Ação noturna.", "Fórmula concentrada.", "Absorção Rápida.", "Fragrância Suave."],
       badge: "Oferta",
       badgeColor: "bg-orange-500"
@@ -78,7 +78,7 @@ const ProductsSection = () => {
       description: "Auxilia na cicatrização, hidrata e regenera a pele, além de ter ação antibacteriana e antifúngica.",
       price: "R$ 79,90",
       originalPrice: "R$ 99,90",
-      image: "/product/ozon.png",
+      image: "/product/ozon.webp",
       features: ["Efeito Cicatrizante.", "Ação Antibacteriana e Antifúngica.", "Propriedades Anti-inflamatórias.", "Hidratação e Regeneração da Pele."],
       badge: "Especializado",
       badgeColor: "bg-primary"

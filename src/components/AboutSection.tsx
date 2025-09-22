@@ -10,7 +10,7 @@ import {
   BookOpen,
   Shield
 } from 'lucide-react';
-import amandaPortrait from '@/assets/amanda-portrait.jpg';
+import amandaPortrait from '@/assets/amanda.jpg';
 
 const AboutSection = () => {
   const handleWhatsApp = () => {

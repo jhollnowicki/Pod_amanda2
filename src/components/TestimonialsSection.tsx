@@ -17,53 +17,30 @@ const TestimonialsSection = () => {
 
   const testimonials = [
     {
-      name: "Maria Santos",
+      name: "Byanca Garbeloto",
       age: "45 anos",
       treatment: "Unha Encravada",
-      text: "Sofria há anos com unha encravada. Amanda resolveu meu problema em uma única sessão, sem dor! Atendimento excepcional e muito profissional. Recomendo de olhos fechados!",
+      text: "Super recomendo, estava com medo de sentir dor, quando cheguei lá a Dra. me explicou tudo que ia ser feito, passou um spray gelado e nao senti dor nenhuma!",
       rating: 5,
       avatar: "👩‍💼"
     },
     {
-      name: "João Silva",
-      age: "62 anos",
+      name: "Antonia Fernandes",
+      age: "56 anos",
       treatment: "Pé Diabético",
-      text: "Como diabético, sempre tive muito cuidado com os pés. A Amanda me ensinou técnicas de cuidado que mudaram minha qualidade de vida. Profissional dedicada e muito competente.",
+      text: "Com toda a certeza a melhor da Fazenda Rio Grande, falo por experiência propria, pois ja fomos em todas as outras clinicas. é meu exposo que faz os procedimentos ele e diabético e amputado! Avalio com 10 estrelas",
       rating: 5,
-      avatar: "👨‍🦳"
+      avatar: "👩‍💼"
     },
     {
-      name: "Ana Oliveira",
+      name: "Regina Buss",
       age: "28 anos",
-      treatment: "Calos e Ressecamento",
-      text: "Trabalho muito em pé e meus pés estavam sofrendo. O tratamento foi incrível! Saí da clínica com os pés macios e sem dor. O ambiente é super acolhedor e limpo.",
+      treatment: "Unha Encravada",
+      text: "Quero registrar minha gratidão à Amanda e à equipe da recepção pelo cuidado e respeito com meu filho autista. Desde o início, Amanda demonstrou paciência, calma e empatia, explicando cada detalhe e buscando distraí-lo mesmo quando estava choroso e com medo. Aos poucos, ele foi se sentindo mais confiante, chegando até a puxar assunto e sorrir durante os atendimentos. Hoje, o tratamento da unha encravada está evoluindo muito bem, graças ao profissionalismo e carinho da Podóloga Amanda e sua equipe.",
       rating: 5,
-      avatar: "👩‍🔬"
+      avatar: "👩‍💼"
     },
-    {
-      name: "Pedro Costa",
-      age: "35 anos",
-      treatment: "Verrugas Plantares",
-      text: "As verrugas nos meus pés me incomodavam há meses. O tratamento a laser da Amanda foi rápido e eficaz. Em poucas sessões, o problema estava resolvido completamente!",
-      rating: 5,
-      avatar: "👨‍💻"
-    },
-    {
-      name: "Lucia Fernandes",
-      age: "58 anos",
-      treatment: "Micose das Unhas",
-      text: "Tentei vários tratamentos para micose e nada funcionava. A Amanda usou laser e produtos específicos. Resultado surpreendente! Minhas unhas estão lindas e saudáveis novamente.",
-      rating: 5,
-      avatar: "👩‍🏫"
-    },
-    {
-      name: "Carlos Rodrigues",
-      age: "40 anos",
-      treatment: "Fascite Plantar",
-      text: "A dor no calcanhar estava me impedindo de correr. O tratamento da Amanda, junto com as palmilhas personalizadas, me devolveu a qualidade de vida. Voltei a correr sem dor!",
-      rating: 5,
-      avatar: "🏃‍♂️"
-    }
+    
   ];
 
   const renderStars = (rating: number) => {

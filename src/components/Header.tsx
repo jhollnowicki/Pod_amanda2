@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Phone, MessageCircle } from 'lucide-react';
-import logo from '@/assets/logo-nova.png';
+import logo from '@/assets/logo-nova.webp';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

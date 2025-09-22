@@ -9,7 +9,7 @@ import {
   Mail,
   ExternalLink
 } from 'lucide-react';
-import logo from '@/assets/logo-nova.png';
+import logo from '@/assets/logo-nova.webp';
 
 const Footer = () => {
   const handleWhatsApp = () => {
