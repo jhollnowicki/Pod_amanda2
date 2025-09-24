@@ -11,6 +11,9 @@ import {
   Check
 } from 'lucide-react';
 import { useState, useEffect } from "react";
+import SensitiveImage from "./SensitiveImage";
+
+
 
 
 const ServicesSection = () => {
@@ -33,6 +36,7 @@ const ServicesSection = () => {
           name: "Unhas Encravadas",
           description: "Tratamento especializado para alívio imediato da dor",
           features: ["Técnica indolor", "Resultado imediato", "Prevenção de recidiva"],
+          sensitive: true,
 
         },
         {
@@ -117,7 +121,8 @@ const ServicesSection = () => {
           name: "Úlceras Diabéticas",
           description: "Tratamento especializado de feridas",
           features: ["Curativos especiais", "Acompanhamento frequente", "Protocolo médico"],
-          images: ["/service/pes-diabeticos-antes.webp", "/service/pes-diabeticos-depois.webp"]
+          images: ["/service/pes-diabeticos-antes.webp", "/service/pes-diabeticos-depois.webp"],
+          sensitive: true,
         },
         {
           name: "Orientação Preventiva",
@@ -176,10 +181,18 @@ const ServicesSection = () => {
                     >
                       {/* TOPO COM IMAGEM QUADRADA */}
                       {service.images ? (
-                        <BeforeAfterSlider images={service.images} />
+                        service.sensitive ? (
+                          <SensitiveBeforeAfter
+                            images={service.images}
+                            alt={service.name}
+                          />
+                        ) : (
+                          <BeforeAfterSlider images={service.images} />
+                        )
                       ) : (
                         <ServiceThumb image={(service as any).image} Icon={IconComponent} />
                       )}
+
 
                       {/* TÍTULO + DESCRIÇÃO */}
                       <CardHeader className="pb-4">
@@ -313,6 +326,56 @@ const ServiceThumb = ({ image, Icon }: { image?: string; Icon: any }) => {
     </div>
   );
 };
+const SensitiveBeforeAfter = ({
+  images,
+  alt,
+}: {
+  images: string[];
+  alt?: string;
+}) => {
+  const [revealed, setRevealed] = useState(false);
+
+  if (!revealed) {
+    return (
+      <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden ring-1 ring-[#EAD1D6]/60">
+        {/* prévia borrada (usa a primeira imagem só para “contexto”) */}
+        <img
+          src={images[0]}
+          alt={alt || "Conteúdo sensível"}
+          loading="lazy"
+          decoding="async"
+          className="absolute inset-0 w-full h-full object-cover blur-2xl scale-105"
+        />
+        <div className="absolute inset-0 grid place-items-center bg-black/55 backdrop-blur-[2px]">
+          <div className="mx-4 max-w-sm text-center text-white">
+            <p className="text-sm font-semibold">Conteúdo sensível</p>
+            <p className="text-xs opacity-90 mb-3">
+              Imagem clínica (procedimento podológico).
+            </p>
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation(); // não abrir o WhatsApp do card
+                setRevealed(true);
+              }}
+              className="inline-flex items-center gap-2 rounded-xl px-4 py-2 font-semibold bg-white text-black hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-white/70"
+              aria-label="Mostrar conteúdo sensível"
+            >
+              Mostrar
+              <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M12 5c-7 0-10 7-10 7s3 7 10 7 10-7 10-7-3-7-10-7Zm0 11a4 4 0 1 1 0-8 4 4 0 0 1 0 8Z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // após consentir, renderiza o slider normal
+  return <BeforeAfterSlider images={images} />;
+};
+
 
 
 
