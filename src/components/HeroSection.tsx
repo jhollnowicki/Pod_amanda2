@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Calendar, MessageCircle, Star, Users, Award, Clock } from 'lucide-react';
-import heroClinic from '@/assets/hero-clinic.webp';
-import feetCare from '@/assets/feet-care.webp';
+import heroClinic from '@/assets/local1.jpeg';
+import feetCare from '@/assets/local2.jpeg';
 
 const HeroSection = () => {
   const handleWhatsApp = () => {
